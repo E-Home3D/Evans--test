@@ -58,3 +58,19 @@ window.addEventListener('scroll', function() {
     }
     lastScrollTop = scrollTop;
 });
+
+// Gestion du menu hamburger
+const menuToggle = document.querySelector('.menu-toggle');
+const navUl = document.querySelector('nav ul');
+
+menuToggle.addEventListener('click', () => {
+    navUl.classList.toggle('show');
+});
+
+// Fermer le menu lorsqu'un lien est cliqué
+const navLinks = document.querySelectorAll('nav ul li a');
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navUl.classList.remove('show');
+    });
+});
