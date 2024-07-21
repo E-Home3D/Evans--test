@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Assurez-vous que c'est le nom de votre branche principale
+      - main
 
 jobs:
   deploy:
@@ -14,4 +14,5 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: .  # Le répertoire contenant vos fichiers HTML, CSS, etc.
+        publish_dir: .
+        publish_branch: main  # Publier directement sur la branche main
