@@ -15,4 +15,4 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: .
-        publish_branch: master  # Publier directement sur la branche master
+        publish_branch: gh-pages  # Publier sur la branche gh-pages
